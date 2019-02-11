@@ -9,6 +9,43 @@ public class CollectionsDemo {
     public static final String lineSeperator = "------------------------ ".replaceAll(" ", "\n");
 
     public static void main(String[] args) {
+
+        // create a list contains country names
+        ArrayList<String> countryList = new ArrayList<String>();
+        countryList.add("Turkey");
+        countryList.add("Belgium");
+        countryList.add("Denmark");
+        countryList.add("Greece");
+        countryList.add("USA");
+        countryList.add("China");
+        countryList.add("Japan");
+        countryList.add("Brasil");
+
+        //Print the list
+        for(String countries:countryList){
+            System.out.println(countries);
+        }
+        System.out.println(lineSeperator);
+
+        //Sort, then print the list
+        System.out.println("Lets sort the countries");
+        Collections.sort(countryList);
+        for(String countries:countryList){
+            System.out.println(countries);
+        }
+        System.out.println(lineSeperator);
+
+        //Reverse sorting Z-> A  , n ->1
+        System.out.println("Lets sort them reverse order");
+        Collections.reverse(countryList);
+        for(String countries:countryList){
+            System.out.println(countries);
+        }
+        System.out.println(lineSeperator);
+
+
+    }
+   /* public static void main(String[] args) {
         //define an arraylist
         ArrayList<String> userList = new ArrayList<String>();
 
@@ -70,5 +107,5 @@ public class CollectionsDemo {
         userList.clear();
         System.out.println("Number of items in arraylist is after clear() is " +userList.size());
 
-    }
+    }*/
 }
