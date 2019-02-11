@@ -50,5 +50,18 @@ public class CollectionsDemo {
             System.out.println(usersAftertheRemove2);
         }
         System.out.println(lineSeperator);
+
+        //edit an object
+        System.out.println("The object is "+userList.get(0));
+        System.out.println("Edit the " +userList.indexOf("Samet")+ "th object");
+        System.out.println("Samet =>> Oguz");
+        userList.set(0,"Oguz");
+        System.out.println("The object is now " +userList.get(0));
+        System.out.println(lineSeperator);
+
+        //iterate the new arraylist
+        for(String users:userList){
+            System.out.println(users);
+        }
     }
 }
