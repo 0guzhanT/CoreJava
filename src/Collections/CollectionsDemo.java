@@ -63,5 +63,12 @@ public class CollectionsDemo {
         for(String users:userList){
             System.out.println(users);
         }
+        System.out.println(lineSeperator);
+
+        //remove all object from the arraylist
+        System.out.println("Number of items in arraylist before clear() is "+userList.size());
+        userList.clear();
+        System.out.println("Number of items in arraylist is after clear() is " +userList.size());
+
     }
 }
