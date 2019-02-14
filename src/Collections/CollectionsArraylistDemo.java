@@ -4,7 +4,7 @@ package Collections;
 import java.util.ArrayList;
 import java.util.Collections;
 
-public class CollectionsDemo {
+public class CollectionsArraylistDemo {
 
     public static final String lineSeperator = "------------------------ ".replaceAll(" ", "\n");
 
@@ -20,6 +20,9 @@ public class CollectionsDemo {
         countryList.add("China");
         countryList.add("Japan");
         countryList.add("Brasil");
+
+
+
 
         //Print the list
         for(String countries:countryList){
