@@ -91,7 +91,10 @@ public class StringOpsDemo {
         System.out.println("Capacity of the buffer is "+sb.capacity());
         System.out.println(lineSeperator);
 
-        //charAt setCharAt methods
+        //replace char
+        String username = "Oguzhan.Unl..u";
+        String usernameWODot = username.replace(".","");
+        System.out.println(usernameWODot);
 
 
     }
