@@ -6,15 +6,14 @@ public class StringOpsDemo {
 
     public static void main(String[] args) {
         //Create chars array
-        char chars [] = {'O','g','u','z'};
+        char chars[] = {'O', 'g', 'u', 'z'};
         //Print the array
         String s = new String(chars);
         //Print array by offset and count
-        String s1 = new String (chars,1,3);
+        String s1 = new String(chars, 1, 3);
         System.out.println(s);
         System.out.println(s1);
         System.out.println(lineSeperator);
-
 
         //Char at a given idex
         System.out.println(s.charAt(3));
@@ -25,24 +24,23 @@ public class StringOpsDemo {
 
         //Get Chars example
         // getChars(int sourceStart, int sourceEnd, char target[ ], int targetStart)
-        String line ="This is a demo of the getChars method";
+        String line = "This is a demo of the getChars method";
         int sourceStart = 10;
         int sourceEnd = 15;
-        char [] newLine = new char[sourceEnd-sourceStart];
+        char[] newLine = new char[sourceEnd - sourceStart];
         int targetStart = 0;
 
-
-       line.getChars(15,20,newLine,targetStart);
+        line.getChars(15, 20, newLine, targetStart);
         System.out.println(newLine);
         System.out.println(lineSeperator);
         System.out.println("byte to char");
-        byte [] b = line.getBytes();
+        byte[] b = line.getBytes();
 
         System.out.println(lineSeperator);
         System.out.println();
-        for(int i =0; i<b.length ; i++){
+        for(int i = 0; i < b.length; i++) {
             char c = (char) b[i];
-            System.out.println("index:"+i +" , byte:" +b[i]+ " ,character:"+c);
+            System.out.println("index:" + i + " , byte:" + b[i] + " ,character:" + c);
         }
 
         //String comparison
@@ -55,7 +53,7 @@ public class StringOpsDemo {
         String value4 = "OGUZ";
         System.out.println(value1.equals(value2));
         System.out.println(value4.equals(value1));
-        System.out.println(value1.equalsIgnoreCase(value2)  );
+        System.out.println(value1.equalsIgnoreCase(value2));
         System.out.println(value1.endsWith("Z") && value3.startsWith("O"));
 
         //equals for string comparison, == object comparison
@@ -69,33 +67,52 @@ public class StringOpsDemo {
 
         //Substrings
 
-        String baseString ="Naber lan p";
+        String baseString = "Naber lan p";
         System.out.println(baseString);
         System.out.println(baseString.substring(3));
-        System.out.println(baseString.substring(4,8));
+        System.out.println(baseString.substring(4, 8));
 
-        for(int i=0; i< baseString.length(); i++){
+        for(int i = 0; i < baseString.length(); i++) {
             System.out.println(baseString.substring(i).concat("11"));
         }
         double num = 12;
         String doubleNum = String.valueOf(num);
         System.out.println(doubleNum);
 
-        String result = String.join(", " ,"ID","Username","Email","Department");
+        String result = String.join(", ", "ID", "Username", "Email", "Department");
         System.out.println(result);
         System.out.println(lineSeperator);
 
         //Stringbuffer examples!!
         StringBuffer sb = new StringBuffer("Test11111");
-        System.out.println("Length of the buffer is "+sb.length());
-        System.out.println("Capacity of the buffer is "+sb.capacity());
+        System.out.println("Length of the buffer is " + sb.length());
+        System.out.println("Capacity of the buffer is " + sb.capacity());
         System.out.println(lineSeperator);
 
         //replace char
         String username = "Oguzhan.Unl..u";
-        String usernameWODot = username.replace(".","");
+        String usernameWODot = username.replace(".", "");
         System.out.println(usernameWODot);
+        System.out.println(usernameWODot.substring(0, 7));
+        System.out.println(lineSeperator);
 
+        StringBuffer sb2 = new StringBuffer("1234567890");
+        sb2.setLength(5);
+        System.out.println(sb2);
+        sb2.setCharAt(0, 'a');
+        sb2.setCharAt(1, 'b');
+        sb2.setCharAt(2, 'c');
+        sb2.setCharAt(4, 'e');
+        System.out.println(sb2);
+        System.out.println(lineSeperator);
 
+        //StringBuffer to char array
+        StringBuffer sb2Array = new StringBuffer("qwertyuıop");
+        char[] sbArray = new char[9];
+        sb2Array.getChars(0, 7, sbArray, 0);
+
+        for(char c : sbArray) {
+            System.out.println(c);
+        }
     }
 }
